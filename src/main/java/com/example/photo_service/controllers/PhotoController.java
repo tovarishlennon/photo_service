@@ -2,8 +2,6 @@ package com.example.photo_service.controllers;
 
 import com.example.photo_service.dto.GetPhotoResponseDto;
 import com.example.photo_service.service.PhotoService;
-import com.example.photo_service.service.impl.FTPDirectorySearcher;
-import org.apache.commons.net.ftp.FTPClient;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

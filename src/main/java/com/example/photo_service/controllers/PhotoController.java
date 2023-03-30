@@ -5,6 +5,7 @@ import com.example.photo_service.service.PhotoService;
 import com.example.photo_service.service.impl.FTPDirectorySearcher;
 import org.apache.commons.net.ftp.FTPClient;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -21,7 +22,7 @@ public class PhotoController {
         this.photoService = photoService;
     }
 
-    @RequestMapping("/photos")
+    @GetMapping("/photos")
     public ResponseEntity<List<GetPhotoResponseDto>> sendMessage() throws Exception {
         List<GetPhotoResponseDto> response = photoService.getPhotosWithFTP();
         return ResponseEntity.ok(response);

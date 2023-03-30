@@ -45,7 +45,7 @@ public class FtpClientConnect {
             ftp.setFileType(FTPClient.BINARY_FILE_TYPE);
             ftp.enterLocalPassiveMode();
             return ftp;
-        } catch (Exception ex) {
+        } catch (IOException ex) {
             throw new RemoteException("Cannot connect to the server!");
         }
 

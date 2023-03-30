@@ -23,7 +23,7 @@ public class PhotoController {
     }
 
     @GetMapping("/photos")
-    public ResponseEntity<List<GetPhotoResponseDto>> sendMessage() throws Exception {
+    public ResponseEntity<List<GetPhotoResponseDto>> sendMessage() throws IOException {
         List<GetPhotoResponseDto> response = photoService.getPhotosWithFTP();
         return ResponseEntity.ok(response);
     }
